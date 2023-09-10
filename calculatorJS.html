@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            margin-top: 17vh;
+        }
+        .input{
+           
+            word-wrap: break-word;
+            width: 52h; height:20vh;
+            padding: 10pX;
+        background-color: ghostwhite;
+    background-color: black;
+color: white;
+font-size: 7vh;}
+            .button{
+                display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4pX;
+            
+                width: 12.5vh;
+            height: 9vh;
+            
+            
+            border-radius: 10vh;
+            padding: 10pX; 
+        background-color: rgb(54, 53, 53);
+    color: white;
+font-size: 5vh;
+font-family: Arial, Helvetica, sans-serif;}
+           .row1  ,.row2 ,.row3, .row4{
+            display: flex;
+            
+        }
+        .clear,.sign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(248, 162, 1);
+    font-size: 5vh;
+
+}
+            .button:hover{
+                opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    background-color:rgb(248, 162, 1);
+    color: white;
+}
+
+.sign1{
+    background-color: rgba(175, 168, 168, 0.728);
+    color: black;
+   
+}
+            
+    </style>
+</head>
+<body>
+    <div class="input"></div>
+    <div class="row1">
+        <div onclick="my('7')" class="button">7</div>
+        <div onclick="my('8')" class="button">8</div>
+        <div onclick="my('9')"class="button">9</div>
+        <div  onclick="my('C')" class="button clear">C</div>
+    </div>
+    <div class="row2">
+        <div onclick="my('4')" class="button">4</div>
+        <div onclick="my('5')" class="button">5</div>
+        <div onclick="my('6')" class="button">6</div>
+        <div onclick="my('*')" class="button sign">*</div>
+    </div>
+    <div class="row3">
+        <div onclick="my('1')" class="button">1</div>
+        <div onclick="my('2')" class="button">2</div>
+        <div onclick="my('3')" class="button">3</div>
+        <div onclick="my('/')" class="button sign">/</div>
+    </div>
+    <div class="row4">
+        <div onclick="my('0')" class="button sign1">0</div>
+        <div onclick="my('+')" class="button sign1">+</div>
+        <div onclick="my('-')" class="button sign1">-</div>
+        <div onclick="my('=')" class="button sign">=</div>
+    </div>
+    <script>
+        var s;
+        function my(s){
+          if(s ==="0" || s === "1" || s === "2" || s === "3" ||s === "4"  || s === "5" || s === "6" ||
+           s === "7" || s === "8" || s === "9" || s === "/" || s === "-" || s === "*"|| s === "+" ){
+    var w = document.getElementsByClassName("input").value+s;
+    document.getElementsByClassName("input").value=w[0].value;
+             }
+             if(s==="C")
+             {
+                document.getElementsByClassName("input").value="";
+             }
+
+          if(s==="="){
+            document.getElementsByClassName("input").value=eval(document.getElementsByClassName("input").value);
+          }
+
+
+        }
+       
+    </script>
+</body>
+</html>
+        
+            
+            
